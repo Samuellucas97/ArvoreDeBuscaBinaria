@@ -1,7 +1,24 @@
 # BinaryTree
 
 Neste repositório é implementado o container denominado __Árvore de Busca Binária__ referente à atividade da 2ª unidade da disciplina de
-_Estrutura de Dados II_ do bacharelado de Tecnologia da Informação (__UFRN__).
+_Estrutura de Dados II_ do bacharelado de Tecnologia da Informação (__UFRN__). 
+
+
+## O que é Árvore de busca binária?
+
+Em Ciência da computação, uma árvore binária de busca (ou árvore binária de pesquisa) é uma estrutura de dados de árvore binária baseada em nós, onde todos os nós da subárvore esquerda possuem um valor numérico inferior ao nó raiz e todos os nós da subárvore direita possuem um valor superior ao nó raiz (esta é a forma padrão, podendo as subárvores serem invertidas, dependendo da aplicação).
+
+O objetivo desta árvore é estruturar os dados de forma a permitir busca binária.[^1]  
+
+
+| Algoritmo 	| Pior caso 	|
+| :--			|			--:	|
+| Busca			|	O(n)		|
+| Inserção		|	O(n)		|
+| Remoção		|	O(n)		|
+
+
+[^1]: https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca
 
 ## Etapa de compilação e execução
 

@@ -23,8 +23,6 @@ class Node{
 		
 		/**<	Chave/conteúdo do nó */
 		T chave;
-		/**<	Ponteiro que indica quem é o pai do nó atual */
-		unique_ptr<T> pai;
 		/**<	Ponteiro que indica quem é o filho da esquerda do nó atual */	
 		unique_ptr<T> filhoEsquerda;
 		/**<	Ponteiro que indica quem é o filho da direita do nó atual */
@@ -41,12 +39,11 @@ class Node{
 	
 		/**
 		 * @brief 	Construtor parametrizado
-		 * @param 	chaveNova			
-		 * @param 	paiNovo				 
+		 * @param 	chaveNova				 
 		 * @param 	filhoEsquerdaNovo	
 		 * @param 	filhoDireitaNovo			 
 		*/	
-		Node(T chaveNova, T* paiNovo, T* filhoEsquerdaNovo, T* filhoDireitaNovo);
+		Node(T chaveNova, T* filhoEsquerdaNovo = nullptr, T* filhoDireitaNovo = nullptr);
 
 		T getChave();
 		void setChave(T chaveNova);	
