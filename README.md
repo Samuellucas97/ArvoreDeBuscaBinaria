@@ -36,6 +36,6 @@ Além disso, caso deseje fazer o debugger do programa, primeiro digite no termin
 
 ## Autor
 
-Samuel Lucas de Moura Ferino(_samuel1797@gmail.com_)
+Samuel Lucas de Moura Ferino (_samuel1797@gmail.com_)
 
 
