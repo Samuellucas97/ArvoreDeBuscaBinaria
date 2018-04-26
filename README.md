@@ -1,4 +1,4 @@
-# BinaryTree
+# Binary Search Tree
 
 Neste repositório é implementado o container denominado __Árvore de Busca Binária__ referente à atividade da 2ª unidade da disciplina de
 _Estrutura de Dados II_ do bacharelado de Tecnologia da Informação (__UFRN__). 
