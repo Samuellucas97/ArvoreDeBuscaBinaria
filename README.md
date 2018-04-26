@@ -6,7 +6,7 @@ Neste repositório é implementado o container denominado __Árvore de Busca Bin
 
 	Obs: Todos os códigos digitados no terminal deverão ser na respectiva pasta do programa.
 
-Depois de clonar o repositório na respectiva pasta local, digite **make** para 
+Depois de clonar o repositório na respectiva pasta local, digite `**make**` para 
 realizar a compilação, resultando na criação do arquivo binário(executável) 
 denominado ***binarytree***. Em seguida, digite `./binarytree` para executar o programa.
 
