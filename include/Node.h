@@ -24,9 +24,9 @@ class Node{
 		/**<	Chave/conteúdo do nó */
 		T chave;
 		/**<	Ponteiro que indica quem é o filho da esquerda do nó atual */	
-		unique_ptr<T> filhoEsquerda;
+		unique_ptr<T> esquerda;
 		/**<	Ponteiro que indica quem é o filho da direita do nó atual */
-		unique_ptr<T> filhoDireita;
+		unique_ptr<T> direita;
 
 	/// MÉTODOS	
 		
@@ -36,28 +36,23 @@ class Node{
 		 * @brief 	Construtor padrão
 		*/	
 		Node();
-	
+		
 		/**
-		 * @brief 	Construtor parametrizado
-		 * @param 	chaveNova				 
-		 * @param 	filhoEsquerdaNovo	
-		 * @param 	filhoDireitaNovo			 
+		 * @brief 	Destrutor padrão
 		*/	
-		Node(T chaveNova, T* filhoEsquerdaNovo = nullptr, T* filhoDireitaNovo = nullptr);
+		~Node();
+		
+		Node(T chaveNova, T* esquerdaNovo = nullptr, T* direitaNovo = nullptr);
 
 		T getChave();
 		void setChave(T chaveNova);	
 
-		unique_ptr<T> getPai();
-		void setPai(unique_ptr<T> paiNovo);
-		
-		unique_ptr<T> getFilhoDireita();
-		void setFilhoDireita(unique_ptr<T> filhoDireitaNovo);
+		unique_ptr<T> getDireita();
+		void setDireita(unique_ptr<T> direitaNovo);
 		
 		unique_ptr<T> getFilhoEsquerda();
-		void setFilhoEsquerda(unique_ptr<T> filhoEsquerdaNovo);
+		void setEsquerda(unique_ptr<T> esquerdaNovo);
 		
-
 };
 
 #endif
