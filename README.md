@@ -8,7 +8,7 @@ _Estrutura de Dados II_ do bacharelado de Tecnologia da Informação (__UFRN__).
 
 Em Ciência da computação, uma **árvore binária de busca** (ou ***árvore binária de pesquisa***) é uma estrutura de dados de árvore binária baseada em nós, onde todos os nós da subárvore esquerda possuem um valor numérico inferior ao nó raiz e todos os nós da subárvore direita possuem um valor superior ao nó raiz (esta é a forma padrão, podendo as subárvores serem invertidas, dependendo da aplicação).
 
-O objetivo desta árvore é estruturar os dados de forma a permitir busca binária.[Wikipedia]  
+O objetivo desta árvore é estruturar os dados de forma a permitir busca binária. [Wikipedia]  
 
 
 | Algoritmo 	| Pior caso 	|
@@ -26,7 +26,7 @@ O objetivo desta árvore é estruturar os dados de forma a permitir busca binár
 
 Depois de clonar o repositório na respectiva pasta local, digite ```make``` para 
 realizar a compilação, resultando na criação do arquivo binário(executável) 
-denominado ***binarytree***. Em seguida, digite ```./binarytree``` para executar o programa.
+denominado ***binarysearchtree***. Em seguida, digite ```./binarysearchtree``` para executar o programa.
 
 ###  Documentação e exclusão dos objetos e do executável
 

@@ -11,7 +11,7 @@ BUILD_PATH = build
 BIN_PATH = $(BUILD_PATH)/bin
 
 # executable #
-BIN_NAME = binarytree
+BIN_NAME = binarysearchtree
 
 # extensions #
 SRC_EXT = cpp
@@ -29,7 +29,7 @@ DEPS = $(OBJECTS:.o=.d)
 # flags #
 OPTIMIZE = -O03
 DEBUG = -g -D BACKTRACKING_PLAYER
-COMPILE_FLAGS = -std=c++11 -Wall -Wextra
+COMPILE_FLAGS = -std=c++14 -Wall -Wextra
 #COMPILE_FLAGS = -std=c++17 -Wall -Wextra -g
 INCLUDES = -I include/
 #INCLUDES = -I include/ -I /usr/local/include
@@ -67,8 +67,8 @@ clean:
 
 .PHONY: doxy
 doxy: 	
-	doxygen -g		
-	doxygen Doxyfile	
+#	doxygen -g		
+	doxygen ./Doxyfile	
 
 # checks the executable and symlinks to the output
 .PHONY: all
