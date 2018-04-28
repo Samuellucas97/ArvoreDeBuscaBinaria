@@ -11,18 +11,18 @@ Em Ciência da computação, uma **árvore binária de busca** (ou ***árvore bi
 O objetivo desta árvore é estruturar os dados de forma a permitir busca binária. [Wikipedia]  
 
 
-| Algoritmo 	| Pior caso 	|
-| :--			|			--:	|
-| Busca			|	O(n)		|
-| Inserção		|	O(n)		|
-| Remoção		|	O(n)		|
+| Algoritmo 	| 	Caso médio	|	Pior caso 	|
+| :--			|	---			|			--:	|
+| Busca			|	O(lg n)		|	 O(n)		|
+| Inserção		|	O(lg n)		|	 O(n)		|
+| Remoção		|	O(lg n)		|	 O(n)		|
 
 
 [Wikipedia]: https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca
 
 ## Etapa de compilação e execução
 
-	Obs: Todos os códigos digitados no terminal deverão ser na respectiva pasta do programa.
+	Obs: Todos os códigos digitados no terminal deverão ser na respectiva pasta raiz do programa. Exceto na vizualização da documentação do projeto, não será necessária alterar a pasta.
 
 Depois de clonar o repositório na respectiva pasta local, digite ```make``` para 
 realizar a compilação, resultando na criação do arquivo binário(executável) 

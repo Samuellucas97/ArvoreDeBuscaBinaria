@@ -1,5 +1,5 @@
 /**
- * @file 		Node.h 
+ * @file 		node.h 
  * @brief		Contém a classe Node a implementação de seus métodos
  * @author 		Samuel Lucas de Moura Ferino
  * @since 		26.04.2018
@@ -63,6 +63,12 @@ class Node{
 		
 			return *this;
 		}
+
+
+		/**
+		 * @brief	Destrutor padrão 
+		 */	
+		~Node(){	/** Vazio */	}
 
 		/**
 		 * @brief 		Método get do atributo chave
