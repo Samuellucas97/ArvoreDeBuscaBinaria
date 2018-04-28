@@ -1,3 +1,10 @@
+/**
+ * @file 		Node.h 
+ * @brief		Contém a classe Node a implementação de seus métodos
+ * @author 		Samuel Lucas de Moura Ferino
+ * @since 		26.04.2018
+ * @version 	0.0.7
+*/
 #ifndef	_BINARYSEARCHTREE_H
 #define	_BINARYSEARCHTREE_H
 
@@ -17,17 +24,39 @@ class BinarySearchTree{
 		BinarySearchTree(){}
 		~BinarySearchTree(){}
 			
-		/** 
-			inOrderTreeWalk(){
-				if( raiz != nullptr)
+		/** 			******** PERCORRER RECURSIVAMENTE A ÁRVORE ********
+
+			preOrderTreWalk(Node<T> x){
+				if( x != nullptr)
 					
-					inOrder(raiz.getEsquerda());
-					imprime(raiz.getChave() );
-					inOrder(raiz.getDireita() );
+					imprime(x.getChave() );
+					inOrder(x.getEsquerda());
+					inOrder(x.getDireita() );
 
 			}
 
+			inOrderTreeWalk(Node<T> x){
+				if( x != nullptr)
+					
+					inOrder(x.getEsquerda());
+					imprime(x.getChave() );
+					inOrder(x.getDireita() );
+
+			}
+
+			posOrderTreWalk(Node<T> x){
+				if( x != nullptr)
+					
+					inOrder(x.getEsquerda());
+					inOrder(x.getDireita() );
+					imprime(x.getChave() );
+
+			}
+
+
 		*/
+
+
 		/** 
 			buscarRecursivaElemento();
 
