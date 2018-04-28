@@ -68,7 +68,7 @@ clean:
 .PHONY: doxy
 doxy: 	
 #	doxygen -g		
-	doxygen ./Doxyfile	
+	doxygen Doxyfile	
 
 # checks the executable and symlinks to the output
 .PHONY: all

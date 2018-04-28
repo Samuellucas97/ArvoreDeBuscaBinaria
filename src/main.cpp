@@ -8,10 +8,13 @@
 
 #include <iostream>
 #include "node.h"
+#include "binarysearchtree.h"
 
 
 int main()
 {
+	///						******* TESTES COM A CLASSE NODE ********					
+
 	int a = 10;
 	Node<int> aa(a);
 	Node<int> bb(230);	
@@ -24,6 +27,17 @@ int main()
 	d = bb;
 	std::cout << "Depois... Chave:" << d.getChave() << std::endl;
 
+	Node<int>* a9 = &aa;
 
+	/// 					********  /\/\/\/\/\/\/\/\/\/\/\ ********
+
+	///						******* TESTES COM A CLASSE BINARYSEARCHTREE ********					
+
+
+
+	//BinarySearchTree<int> g;
+	BinarySearchTree<int> g1(a9);
+
+	g1.setRaiz(a9);
 	return 0;
 }

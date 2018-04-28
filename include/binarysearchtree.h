@@ -10,7 +10,12 @@
 #define	_BINARYSEARCHTREE_H
 
 #include "node.h"
+
 #include <ostream>
+using std::cout;
+
+#include <memory>
+using std::unique_ptr;
 
 /**
  * @class 		BinarySearchTree
@@ -29,17 +34,25 @@ class BinarySearchTree{
 
 	public:
 
+		/**
+		 * @brief	Construtor padrão
+		 */	
+		BinarySearchTree(){
+			raiz = new Node<T>();
+		}
 
 		/**
-		 * @brief	Construtor padrão e parametrizado ao mesmo tempo
-		 * @param 	raiNova			Nó novo
+		 * @brief	Construtor parametrizado ao mesmo tempo
+		 * @param 	raizNova			Nó novo
 		 */	
-		BinarySearchTree(Node<T>* raizNova = nullptr ): raiz(raizNova){}
+		BinarySearchTree(Node<T>* raizNova ): raiz(raizNova){}
 
 		/**
 		 * @brief	Destrutor padrão 
 		 */	
-		~BinarySearchTree(){	/** Vazio */	}
+		~BinarySearchTree(){	
+			delete raiz; 
+		}
 
 		/**
 		 * @brief 		Método get do atributo raiz
@@ -55,52 +68,84 @@ class BinarySearchTree{
 			this->raiz = raizNova;
 		}
 
-		/** 			******** PERCORRER RECURSIVAMENTE A ÁRVORE ********
 
-			preOrderTreWalk(Node<T> x){
-				if( x != nullptr)
-					
-					imprime(x.getChave() );
-					inOrder(x.getEsquerda());
-					inOrder(x.getDireita() );
+		/**
+		 * @brief		Percorre a árvore toda, imprimindo
+		 */
+/*		void travellingRecursive(void) const{
+	
+			bool PERCORRER = true;
 
+			/// PRE-ORDEM
+			while( PERCORRER ){
+				PERCORRER = preOrderTreeWalk(raiz);
 			}
 
-			inOrderTreeWalk(Node<T> x){
-				if( x != nullptr)
-					
-					inOrder(x.getEsquerda());
-					imprime(x.getChave() );
-					inOrder(x.getDireita() );
+			PERCORRER = true;
 
+			/// IN-ORDEM
+			while( PERCORRER ){
+				PERCORRER = inOrderTreeWalk(raiz);
 			}
 
-			posOrderTreWalk(Node<T> x){
-				if( x != nullptr)
-					
-					inOrder(x.getEsquerda());
-					inOrder(x.getDireita() );
-					imprime(x.getChave() );
+			PERCORRER = true;
+
+			/// POS-ORDEM
+			while( PERCORRER ){
+				PERCORRER = posOrderTreeWalk(raiz);
+			}			
+
+		}
+*/	
+	private:
+
+
+		///   ********* RUNNING THROUGH THE TREE  ********** 
+/*	
+
+		bool preOrderTreeWalk(Node<T>* x){
+			
+			if( x != nullptr)
+				
+				cout << " " + x.getChave() + " ";
+				preOrderTreeWalk( x->getEsquerda() );
+				preOrderTreeWalk( x->getDireita() );
 
 			}
+			
+			return false;	
 
+		}
 
-		*/
+		bool inOrderTreeWalk(Node<T>* x){
+			
+			if( x != nullptr)
+				
+				inOrderTreeWalk( x->getEsquerda() );
+				cout << " " + x.getChave() + " ";
+				inOrderTreeWalk( x->getDireita() );
 
+			}
+			
+			return false;	
 
-		/** 
-			buscarRecursivaElemento();
+		}
 
-		*/
+		bool posOrderTreeWalk(Node<T>* x){
+			
+			if( x != nullptr)
+				
+				posOrderTreeWalk( x->getEsquerda() );
+				posOrderTreeWalk( x->getDireita() );
+				cout << " " + x.getChave() + " ";
 
-		/** imprimeTodoOsNos(){
-			if( raiz != nullptr)
-				cout <<	
+			}
+			
+			return false;	
 
-				imprimeTodoOsNos( raiz-> )
-		} 
-		*/	
+		}		
 
+*/
 };
 
 #endif
