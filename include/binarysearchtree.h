@@ -17,7 +17,15 @@ class BinarySearchTree{
 		BinarySearchTree(){}
 		~BinarySearchTree(){}
 			
-		/** inserirElemento();
+		/** 
+			inOrderTreeWalk(){
+				if( raiz != nullptr)
+					
+					inOrder(raiz.getEsquerda());
+					imprime(raiz.getChave() );
+					inOrder(raiz.getDireita() );
+
+			}
 
 		*/
 		/** 
