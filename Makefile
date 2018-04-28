@@ -67,8 +67,9 @@ clean:
 
 .PHONY: doxy
 doxy: 	
+	@mkdir -p $(DOC_PATH)
 #	doxygen -g		
-	doxygen Doxyfile	
+	doxygen include/binarysearchtree.h include/node.h src/main.cpp README.md 	
 
 # checks the executable and symlinks to the output
 .PHONY: all
