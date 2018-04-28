@@ -3,7 +3,7 @@
  * @brief		Contém a classe BinarySearchTree a implementação de seus métodos
  * @author 		Samuel Lucas de Moura Ferino
  * @since 		26.04.2018
- * @version 	0.0.4
+ * @version 	0.0.7
 */
 
 #ifndef	_BINARYSEARCHTREE_H
