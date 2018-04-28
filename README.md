@@ -24,7 +24,7 @@ O objetivo desta árvore é estruturar os dados de forma a permitir busca binár
 
 Compilador C++ 11 (**g++**), GNU debugger(**GDB**) e Doxygen.
 	
-	Obs.: Tanto o g++ quanto o gdb são nativo do Linux, faltando instalar apenas o Doxygen.  
+	Obs.: Para usuários Linux, tanto o g++ quanto o gdb são ambos nativo, faltando instalar o Doxygen.  
 	Porém, caso deseje usar o gdb no Windows será necessário instalar o MinGW. 
 
 Download Doxygen (**UBUNTU**):
