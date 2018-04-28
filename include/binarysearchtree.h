@@ -14,11 +14,8 @@
 #include <ostream>
 using std::cout;
 
-#include <memory>
-using std::unique_ptr;
-
-/**
- * @class 		BinarySearchTree
+/*!
+ * \class 		BinarySearchTree
 */
 template< typename T>
 class BinarySearchTree{
@@ -27,7 +24,9 @@ class BinarySearchTree{
 
 	private:
 	
-		/**<	Nó raiz */
+		/*!	\var	Node<T>* raiz;	
+				\brief	Nó raiz 
+		 */
 		Node<T>* raiz;
 
 	/// MÉTODOS	
@@ -73,7 +72,7 @@ class BinarySearchTree{
 		 * @brief		Percorre a árvore toda, imprimindo
 		 */
 		void travellingRecursive(void) const{
-	
+			/*!	\var	bool PERCORRER */
 			bool PERCORRER = true;
 
 			/// PRE-ORDEM

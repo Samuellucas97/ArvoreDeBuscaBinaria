@@ -9,8 +9,8 @@
 #ifndef _NODE_H
 #define _NODE_H
 
-/**
- * @class		Node
+/*!
+ * \class		Node
  */
 template<typename T>
 class Node{
@@ -19,13 +19,21 @@ class Node{
 
 	private:
 		
-		/**<	Chave/conteúdo do nó */
+		/*!	\var	T 	chave	
+		  		\brief		Chave/conteúdo do nó 
+		 */
 		T chave;
-		/**<	Ponteiro que indica quem é o nó pai do nó atual */	
+		/*!	\var	Node<T>* p	
+				\brief	Ponteiro que indica quem é o nó pai do nó atual 
+		 */	
 		Node<T>* p;
-		/**<	Ponteiro que indica quem é o nó filho à esquerda do nó atual */	
+		/*!	\var	Node<T>* esquerda
+				\brief	Ponteiro que indica quem é o nó filho à esquerda do nó atual 
+		 */	
 		Node<T>* esquerda;
-		/**<	Ponteiro que indica quem é o nó filho à direita do nó atual */
+		/*!	\var	Node<T>* direita
+				\brief	Ponteiro que indica quem é o nó filho à direita do nó atual 
+		 */
 		Node<T>* direita;
 
 	/// MÉTODOS	
