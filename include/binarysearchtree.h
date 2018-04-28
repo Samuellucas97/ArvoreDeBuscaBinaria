@@ -72,7 +72,7 @@ class BinarySearchTree{
 		/**
 		 * @brief		Percorre a árvore toda, imprimindo
 		 */
-/*		void travellingRecursive(void) const{
+		void travellingRecursive(void) const{
 	
 			bool PERCORRER = true;
 
@@ -96,16 +96,16 @@ class BinarySearchTree{
 			}			
 
 		}
-*/	
+	
 	private:
 
 
 		///   ********* RUNNING THROUGH THE TREE  ********** 
-/*	
+	
 
 		bool preOrderTreeWalk(Node<T>* x){
 			
-			if( x != nullptr)
+			if( x != nullptr){
 				
 				cout << " " + x.getChave() + " ";
 				preOrderTreeWalk( x->getEsquerda() );
@@ -119,7 +119,7 @@ class BinarySearchTree{
 
 		bool inOrderTreeWalk(Node<T>* x){
 			
-			if( x != nullptr)
+			if( x != nullptr){
 				
 				inOrderTreeWalk( x->getEsquerda() );
 				cout << " " + x.getChave() + " ";
@@ -133,7 +133,7 @@ class BinarySearchTree{
 
 		bool posOrderTreeWalk(Node<T>* x){
 			
-			if( x != nullptr)
+			if( x != nullptr){
 				
 				posOrderTreeWalk( x->getEsquerda() );
 				posOrderTreeWalk( x->getDireita() );
@@ -145,7 +145,7 @@ class BinarySearchTree{
 
 		}		
 
-*/
+
 };
 
 #endif
