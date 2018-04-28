@@ -20,9 +20,20 @@ O objetivo desta árvore é estruturar os dados de forma a permitir busca binár
 
 [Wikipedia]: https://pt.wikipedia.org/wiki/%C3%81rvore_bin%C3%A1ria_de_busca
 
+## Requisitos mínimos
+
+Compilador C++11 (**g++**), GNU debugger(**GDB**) e Doxygen
+	
+	Obs.: Caso o usuário utilize o sistem operacional Linux, não há necessidade de instalar nem o g++ nem o gdb pois ambos são nativo do Linux, faltando instalar apenas o Doxygen. Porém, caso deseje usar o gdb no windows será necessário instalar o MinGW. 
+
+Download Doxygen(UBUNTU):
+
+```$ sudo apt-get install doxygen``` 	
+
 ## Etapa de compilação e execução
 
-	Obs: Todos os códigos digitados no terminal deverão ser na respectiva pasta raiz do programa. Exceto na vizualização da documentação do projeto, não será necessária alterar a pasta.
+	Obs: Todos os códigos digitados no terminal deverão ser na respectiva pasta raiz do programa.  
+	Exceto na vizualização da documentação do projeto, não será necessária alterar a pasta.
 
 Depois de clonar o repositório na respectiva pasta local, digite ```make``` para 
 realizar a compilação, resultando na criação do arquivo binário(executável) 
