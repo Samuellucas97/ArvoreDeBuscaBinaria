@@ -33,7 +33,7 @@ Download Doxygen (**UBUNTU**):
 
 ## Etapa de compilação e execução
 
-	Obs: Todos os códigos digitados no terminal deverão ser na respectiva pasta raiz do programa.  
+	Obs.: Todos os códigos digitados no terminal deverão ser na respectiva pasta raiz do programa.  
 	Exceto na vizualização da documentação do projeto, não será necessária alterar a pasta.
 
 Depois de clonar o repositório na respectiva pasta local, digite ```make``` para 
