@@ -3,7 +3,7 @@
  * @brief		Contém a classe BinarySearchTree a implementação de seus métodos
  * @author 		Samuel Lucas de Moura Ferino
  * @since 		26.04.2018
- * @version 	0.0.7
+ * @version 	0.0.9
 */
 
 #ifndef	_BINARYSEARCHTREE_H
@@ -11,8 +11,11 @@
 
 #include "node.h"
 
-#include <ostream>
-using std::cout;
+#include <ostream>		/// cout
+using std::cout;	
+
+#include <stack>		///	stack
+using std::stack;
 
 /*!
  * \class 		BinarySearchTree
@@ -24,10 +27,15 @@ class BinarySearchTree{
 
 	private:
 	
-		/*!	\var	Node<T>* raiz;	
+		/*!	\var	Node<T>* raiz	
 				\brief	Nó raiz 
 		 */
 		Node<T>* raiz;
+		
+		/*! \var 	stack pilha	
+		 		\brief	Guardará os nó no momento de percorrer a árvore não recursivamente
+		 */
+		stack<Node<T>> pilha;
 
 	/// MÉTODOS	
 
@@ -69,42 +77,112 @@ class BinarySearchTree{
 
 
 		/**
-		 * @brief		Percorre a árvore toda, imprimindo
+		 * @brief		Percorre a árvore toda recursivamente, imprimindo-a
 		 */
-		void travellingRecursive(void) const{
-			/*!	\var	bool PERCORRER */
-			bool PERCORRER = true;
+		void travellingRecursively(void) const{
 
 			/// PRE-ORDEM
+
+			/*!	\var	bool PERCORRER 
+			  		\brief	Condição de loop continuar 
+			 */
+			bool PERCORRER = true;
+
+			/*!	\var	Node<T>* copyRootPre 
+			 		\brief	 Copia do nó raiz que será usado no momento de percorrer pré-ordem a árvore 
+			 */
+			Node<T>* copyRootPre = raiz; 			
+	
 			while( PERCORRER ){
-				PERCORRER = preOrderTreeWalk(raiz);
+				PERCORRER = preOrderTreeWalk(copyRootPree);
 			}
 
-			PERCORRER = true;
 
 			/// IN-ORDEM
-			while( PERCORRER ){
-				PERCORRER = inOrderTreeWalk(raiz);
-			}
 
 			PERCORRER = true;
+		
+			/*!	\var	Node<T>* copyRootIn 
+					\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
+			 */
+			Node<T>* copyRootIn = raiz; 			
+	
+			while( PERCORRER ){
+				PERCORRER = inOrderTreeWalk(copyRootIn);
+			}
 
 			/// POS-ORDEM
+
+			PERCORRER = true;
+	
+			/*!	\var	Node<T>* copyRootPos 
+					\brief	 Copia do nó raiz que será usado no momento de percorrer pós-ordem a árvore	 
+			 */
+			Node<T>* copyRootPos = raiz; 				
+
 			while( PERCORRER ){
-				PERCORRER = posOrderTreeWalk(raiz);
+				PERCORRER = posOrderTreeWalk(copyRootPos);
 			}			
+
+		}
+
+		/**
+		 * @brief		Percorre a árvore toda não recursivamente, imprimindo-a
+		 */
+		void travellingNonRecursively(){
+
+			/*!	\var	Node<T>* copyRoot 
+					\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
+			 */
+			Node<T>* copyRoot = raiz;				
+			
+			/*!	\var	bool PERCORRER 
+			  		\brief	Condição de loop continuar 
+			 */
+			bool LOOP = true;
+
+			while( LOOP ){ 
+
+				if(copyRoot != nullptr){	/// CASO O NÓ **NÃO SEJA** NULO
+
+					pilha.push(copyRoot);
+					copyRoot = copyRoot->esquerda; 				
+
+				}						
+
+				else{						/// CASO O NÓ **SEJA** NULO
+
+					if( !pilha.empty() ){			/// CASO A PILHA **NÃO ESTEJA** VAZIA
+
+						copyRoot = pilha.pop();
+						cout << " " + copyRoot.getChave() + " ";	
+						copyRoot = copyRoot->direita;
+
+					}
+
+					else{							/// CASO A PILHA **ESTEJA** VAZIA
+
+						LOOP = false;		
+					}
+											
+				}
+
+			}
 
 		}
 	
 	private:
 
 
-		///   ********* RUNNING THROUGH THE TREE  ********** 
+		///   ********* PERCORRENDO ATRAVÉS DA ÁRVORE  ********** 
 	
-
+		/**
+		 *	@brief		Parte recursiva Pré-Ordem
+		 * 	@param		x 	Nó atual 
+		*/	
 		bool preOrderTreeWalk(Node<T>* x){
 			
-			if( x != nullptr){
+			if( x != nullptr){			/// CASO O NÓ **NÃO SEJA** NULO
 				
 				cout << " " + x.getChave() + " ";
 				preOrderTreeWalk( x->getEsquerda() );
@@ -116,9 +194,13 @@ class BinarySearchTree{
 
 		}
 
+		/**
+		 *	@brief		Parte recursiva In-Ordem
+		 * 	@param		x 	Nó atual 
+		*/	
 		bool inOrderTreeWalk(Node<T>* x){
 			
-			if( x != nullptr){
+			if( x != nullptr){			/// CASO O NÓ **NÃO SEJA** NULO
 				
 				inOrderTreeWalk( x->getEsquerda() );
 				cout << " " + x.getChave() + " ";
@@ -130,9 +212,13 @@ class BinarySearchTree{
 
 		}
 
+		/**
+		 *	@brief		Parte recursiva Pós-Ordem
+		 * 	@param		x 	Nó atual 
+		*/	
 		bool posOrderTreeWalk(Node<T>* x){
 			
-			if( x != nullptr){
+			if( x != nullptr){			/// CASO O NÓ **NÃO SEJA** NULO
 				
 				posOrderTreeWalk( x->getEsquerda() );
 				posOrderTreeWalk( x->getDireita() );
