@@ -32,7 +32,7 @@ class BinarySearchTree{
 		 */
 		Node<T>* raiz;
 		
-		/*! \var 	stack pilha	
+		/*!	\var 	stack pilha	
 		 		\brief	Guardará os nó no momento de percorrer a árvore não recursivamente
 		 */
 		stack<Node<T>> pilha;
