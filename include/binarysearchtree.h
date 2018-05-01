@@ -150,7 +150,7 @@ class BinarySearchTree{
 
 				}						
 
-				else{						/// CASO O NÓ **SEJA** NULO
+				else{		/// CASO O NÓ **SEJA** NULO
 
 					if( !pilha.empty() ){			/// CASO A PILHA **NÃO ESTEJA** VAZIA
 
@@ -160,7 +160,7 @@ class BinarySearchTree{
 
 					}
 
-					else{							/// CASO A PILHA **ESTEJA** VAZIA
+					else{			/// CASO A PILHA **ESTEJA** VAZIA
 
 						LOOP = false;		
 					}
