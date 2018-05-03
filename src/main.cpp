@@ -1,44 +1,31 @@
-/**
- * @file 		Node.h 
- * @brief		Contém a função main e alguns teste com a classe node
- * @author 		Samuel Lucas de Moura Ferino
- * @since 		26.04.2018
- * @version 	0.0.1
-*/ 
-
 #include <iostream>
+#include "Node.h"
+#include "BinarySeachTree.h"
+int main() {
+  
+    //// NÓ
+    
+  Node<int>* b;
+  b= new Node<int>(10);
 
-#include "node.h"
-#include "binarysearchtree.h"
+  Node<int> c (b->getChave(),b, b->getEsquerda() );
 
-
-int main()
-{
-	///						******* TESTES COM A CLASSE NODE ********					
-
-	int a = 10;
-	Node<int> aa(a);
-	Node<int> bb(230);	
-	std::cout << "Antes...  Chave:" << bb.getChave() << std::endl;
-	bb = aa;
-	bb.setChave(12);
-	std::cout << "Depois... Chave:" << bb.getChave() << std::endl;
-	Node<int> d;
-	d.setChave(2);
-	d = bb;
-	std::cout << "Depois... Chave:" << d.getChave() << std::endl;
-
-	Node<int>* a9 = &aa;
-
-	/// 					********  /\/\/\/\/\/\/\/\/\/\/\ ********
-
-	///						******* TESTES COM A CLASSE BINARYSEARCHTREE ********					
+  Node<int>* a;
+  a = new Node<int>();
 
 
+    //// ÁRVORE DE BUSCA BINÁRIA
 
-	//BinarySearchTree<int> g;
-	BinarySearchTree<int> g1(a9);
-
-	g1.setRaiz(a9);
-	return 0;
+  
+  Node<int>* g = a->getEsquerda();
+  
+  BinarySearchTree<int> tree;
+  bool encontrou = tree.searchRecursivelyBOOLEAN(10);
+  
+  if(encontrou)
+    std::cout << "Hello World!" ;
+  else
+    std::cout << "Hello World BOY!"; 
+    
+  return 0;  
 }
