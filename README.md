@@ -44,7 +44,7 @@ denominado ***binarysearchtree***. Em seguida, digite ```./binarysearchtree``` p
 
 Caso deseje verificar a documentação, digite ```make doxy```. Diante disso, abra a pasta **html**, depois abra o arquivo chamado **index.html** o qual possui a documentação.  
 
-Além disso, caso deseje fazer o debugger do programa, primeiro digite no terminal ```make debug```, depois digite ```gdb ./binarytree```.  Ou, se quiser apagar os objetos e o executável, digite ```make clean```.
+Além disso, caso deseje fazer o debugger do programa, primeiro digite no terminal ```make debug```, depois digite ```gdb ./binarysearchtree```.  Ou, se quiser apagar os objetos e o executável, digite ```make clean```.
 
 ## Autor
 
