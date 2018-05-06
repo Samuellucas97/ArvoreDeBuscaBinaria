@@ -1,7 +1,7 @@
 # Binary Search Tree
 	  
 ![License MIT](https://img.shields.io/npm/l/express.svg)
-![Wercker](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg)
+[![Build Status](https://travis-ci.org/AnalyticalGraphicsInc/cesium.svg?branch=master)](https://travis-ci.org/AnalyticalGraphicsInc/cesium)&nbsp;
 [![Docs](https://img.shields.io/readthedocs/pip.svg)](http://cesiumjs.org/tutorials.html)
 	  
 
