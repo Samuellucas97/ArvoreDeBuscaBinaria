@@ -1,6 +1,6 @@
 # Binary Search Tree
 	  
-[![License MIT](https://img.shields.io/badge/style-plastic-green.svg?longCache=true&style=plastic)
+[![License MIT](https://img.shields.io/badge/style-plastic-green.svg?longCache=true&style=plastic)]
 
 [![Build Status](https://travis-ci.org/AnalyticalGraphicsInc/cesium.svg?branch=master)](https://travis-ci.org/AnalyticalGraphicsInc/cesium)&nbsp;
 [![Docs](https://img.shields.io/badge/docs-online-orange.svg)](http://cesiumjs.org/tutorials.html)
