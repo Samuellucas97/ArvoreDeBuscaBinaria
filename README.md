@@ -1,8 +1,4 @@
 # Binary Search Tree
-
-<p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/200px-Binary_search_tree.svg.png" width="50%"  />
-</p>
 	  
 [![Build Status](https://travis-ci.org/AnalyticalGraphicsInc/cesium.svg?branch=master)](https://travis-ci.org/AnalyticalGraphicsInc/cesium)&nbsp;
 [![Docs](https://img.shields.io/badge/docs-online-orange.svg)](http://cesiumjs.org/tutorials.html)
@@ -15,6 +11,11 @@ _Estrutura de Dados II_ do bacharelado em Tecnologia da Informação (__UFRN__).
 ## O que é uma Árvore de busca binária?
 
 Em Ciência da computação, uma **árvore binária de busca** (ou ***árvore binária de pesquisa***) é uma estrutura de dados de árvore binária baseada em nós, onde todos os nós da subárvore esquerda possuem um valor numérico inferior ao nó raiz e todos os nós da subárvore direita possuem um valor superior ao nó raiz (esta é a forma padrão, podendo as subárvores serem invertidas, dependendo da aplicação).
+
+
+<p align="center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/200px-Binary_search_tree.svg.png" width="50%"  />
+</p>
 
 O objetivo desta árvore é estruturar os dados de forma a permitir busca binária. [Wikipedia]  
 
