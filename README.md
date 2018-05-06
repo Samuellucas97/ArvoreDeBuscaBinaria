@@ -1,11 +1,11 @@
 # Binary Search Tree
 
 <p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/200px-Binary_search_tree.svg.png />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/200px-Binary_search_tree.svg.png" width="50%"  />
 </p>
 	  
 [![Build Status](https://travis-ci.org/AnalyticalGraphicsInc/cesium.svg?branch=master)](https://travis-ci.org/AnalyticalGraphicsInc/cesium)&nbsp;
-[![License MIT](https://img.shields.io/badge/docs-online-orange.svg)](http://cesiumjs.org/tutorials.html)
+[![Docs](https://img.shields.io/badge/docs-online-orange.svg)](http://cesiumjs.org/tutorials.html)
 	  
 
 Neste repositório é implementado o container denominado __Árvore de Busca Binária__ referente à atividade da 2ª unidade da disciplina de
