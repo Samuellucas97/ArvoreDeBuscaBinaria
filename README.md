@@ -1,7 +1,6 @@
 # Binary Search Tree
 	  
-![License MIT](https://img.shields.io/badge/style-plastic-green.svg?longCache=true&style=plastic)
-
+![License MIT](https://img.shields.io/npm/l/express.svg)
 [![Build Status](https://travis-ci.org/AnalyticalGraphicsInc/cesium.svg?branch=master)](https://travis-ci.org/AnalyticalGraphicsInc/cesium)&nbsp;
 [![Docs](https://img.shields.io/badge/docs-online-orange.svg)](http://cesiumjs.org/tutorials.html)
 	  
@@ -50,7 +49,7 @@ Visite a página de [Download] ou instale diretamente no terminal usando o segui
 ## Etapa de compilação e execução
 
 	Obs.: Todos os códigos digitados no terminal deverão ser na respectiva pasta raiz do programa.  
-	Exceto na vizualização da documentação do projeto, não será necessária alterar a pasta.
+	Exceto na vizualização da documentação do projeto, não será necessário alterar a pasta.
 
 Depois de clonar o repositório na respectiva pasta local, digite ```make``` para 
 realizar a compilação, resultando na criação do arquivo binário(executável) 
