@@ -35,6 +35,7 @@ int main() {
   delete b;
   delete g;
   delete a;
+  
   // 3° TESTE
     
   cout << "Conteudo do filho esquerdo do no a: " << a->getEsquerda()->getChave() << std::endl << a->getChave() << std::endl;
