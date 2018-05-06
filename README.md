@@ -2,7 +2,7 @@
 	  
 ![License MIT](https://img.shields.io/npm/l/express.svg)
 ![Build Status](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg)
-[![Docs](https://img.shields.io/badge/docs-online-orange.svg)](http://cesiumjs.org/tutorials.html)
+[![Docs](https://img.shields.io/readthedocs/pip.svg)](http://cesiumjs.org/tutorials.html)
 	  
 
 Neste repositório é implementado o container denominado __Árvore de Busca Binária__ referente à atividade da 2ª unidade da disciplina de
