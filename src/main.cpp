@@ -32,14 +32,14 @@ int main() {
   Node<int>* g = a->getEsquerda();
   a->setEsquerda(b);
   
-  delete b;
-  delete g;
-  delete a;
-  
   // 3° TESTE
     
   cout << "Conteudo do filho esquerdo do no a: " << a->getEsquerda()->getChave() << std::endl << a->getChave() << std::endl;
   
+  
+  delete b;
+  delete g;
+  delete a;
 
   //// ÁRVORE DE BUSCA BINÁRIA
 
