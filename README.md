@@ -38,8 +38,7 @@ Compilador C++ 11 (**g++**), GNU debugger (**GDB**) e Doxygen.
 	Obs.: Para usuários Linux, tanto o g++ quanto o gdb são ambos nativo, faltando apenas instalar o Doxygen.  
 	Porém, caso deseje usar o gdb no Windows será necessário instalar o MinGW. 
 
-### :rocket: Download Doxygen ###  
-  
+### :package: Download Doxygen ## 
   
 Visite a página de [Download] ou instale diretamente no terminal usando o seguinte código caso seja usuário ***Ubuntu***:  
 
