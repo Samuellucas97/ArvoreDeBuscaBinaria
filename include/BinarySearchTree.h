@@ -18,6 +18,7 @@
 
 #include <ostream>		/// cout
 using std::cout;	
+using std::endl;
 
 #include <stack>		///	stack
 using std::stack;
@@ -146,7 +147,7 @@ class BinarySearchTree{
 		/**
 		 * @brief		Percorre a árvore toda recursivamente, imprimindo-a
 		 */
-		void travellingRecursively(void) const{
+		void travellingRecursively(void){
 
 			/// PRE-ORDEM
 
@@ -154,7 +155,9 @@ class BinarySearchTree{
 			 		\brief	 Copia do nó raiz que será usado no momento de percorrer pré-ordem a árvore 
 			 */
 			Node<T>* copyRootPre = this->raiz; 			
-	
+	 
+	    cout << "PRE-ORDEM: ";
+	 
 			preOrderTreeWalk(copyRootPre);
 
 			/// IN-ORDEM
@@ -163,7 +166,9 @@ class BinarySearchTree{
 					\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
 			 */
 			Node<T>* copyRootIn = this->raiz; 			
-	
+	    
+	    cout << endl << "IN-ORDEM: ";
+	      
 			inOrderTreeWalk(copyRootIn);
 		
 			/// POS-ORDEM
@@ -172,8 +177,12 @@ class BinarySearchTree{
 					\brief	 Copia do nó raiz que será usado no momento de percorrer pós-ordem a árvore	 
 			 */
 			Node<T>* copyRootPos = this->raiz; 				
-
+   
+      cout << endl << "POS-ORDEM: ";
+	 
 			posOrderTreeWalk(copyRootPos);
+			
+			cout << endl;
 			
 		}
 
@@ -362,39 +371,58 @@ class BinarySearchTree{
 	    return copyRoot;
 	    
 	  }
-	/*  
+	  
+	  /**
+	   * @brief   Busca o nó que contém o sucessor do nó x
+	   * @param   x   Nó o qual será buscando o seu sucessor
+	   * @return  Nó sucessor
+	   */ 
 	  Node<T>* sucessor(Node<T>* x)
 	  {
-	    if(x->getDireita() != nullptr)
+	    
+	    if(x->getDireita() != nullptr){ /// O NÓ x TEM FILHO À DIREITA
 	      x = mimimunOfAnyNode( x->getDireita() );
 	    }
 	    
-	    Node<T>* copyFather = x->getPai(); 
+	    /*!	\var	Node<T>* copyFather 
+					\brief	 Copia do nó pai do nó x	 
+			 */
+	    Node<T>* copyFather = x->getP(); 
 	     
-	     while(copyFather != nullptr && copyFather->getDireita() == x )
-	     {
-	       
+	     while(copyFather != nullptr && copyFather->getDireita() == x ){  /// SUBINDO PELA ÁRVORE
+	       x = copyFather;
+	       copyFather = copyFather->getP();
 	     }
+	     
+	     return copyFather;
 	  }
-	 */
-	 /*
+	  
+	  /**
+	   * @brief   Busca o nó que contém o sucessor do nó x
+	   * @param   x   Nó o qual será buscando o seu sucessor
+	   * @return  Nó sucessor
+	   */ 
 	  Node<T>* predecessor(Node<T>* x){
 	     
-	     if(x->getEsquerda() != nullptr)
-	        x = maximumOfAnyNode( x->getEsquerda() )
+	     if(x->getEsquerda() != nullptr){ /// O NÓ x TEM FILHO À ESQUERDA
+	        x = maximumOfAnyNode( x->getEsquerda() );
 	        return x;
 	     }
 	     
-	     Node<T>* copyFather = x->getPai(); 
+	    /*!	\var	Node<T>* copyFather 
+					\brief	 Copia do nó pai do nó x	 
+			 */
+	    Node<T>* copyFather = x->getP(); 
 	     
-	     while(copyFather != nullptr && copyFather->getDireita() == x )
-	      {  }
+	     while(copyFather != nullptr && copyFather->getEsquerda() == x ){  /// SUBINDO PELA ÁRVORE
+	       x = copyFather;
+	       copyFather = copyFather->getP();
+	     }
 	     
+	     return copyFather;
 	     
 	  }
 	  
-	 */ 
-	 
 	  /**
 	   * @brief   Identifica o local onde deve
 	   */ 
@@ -519,7 +547,7 @@ class BinarySearchTree{
 			
 			if( x != nullptr){			/// CASO O NÓ **NÃO SEJA** NULO
 				
-				cout << " " + x.getChave() + " ";
+				cout << " " << x->getChave() << " ";
 				preOrderTreeWalk( x->getEsquerda() );
 				preOrderTreeWalk( x->getDireita() );
 
@@ -536,7 +564,7 @@ class BinarySearchTree{
 			if( x != nullptr){			/// CASO O NÓ **NÃO SEJA** NULO
 				
 				inOrderTreeWalk( x->getEsquerda() );
-				cout << " " + x.getChave() + " ";
+				cout << " " << x->getChave() << " ";
 				inOrderTreeWalk( x->getDireita() );
 
 			}
@@ -553,7 +581,7 @@ class BinarySearchTree{
 				
 				posOrderTreeWalk( x->getEsquerda() );
 				posOrderTreeWalk( x->getDireita() );
-				cout << " " + x.getChave() + " ";
+				cout << " " << x->getChave() << " ";
 
 			}
 
