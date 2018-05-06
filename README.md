@@ -1,5 +1,7 @@
 # Binary Search Tree
 	  
+[![License MIT](https://img.shields.io/badge/style-plastic-green.svg?longCache=true&style=plastic)
+
 [![Build Status](https://travis-ci.org/AnalyticalGraphicsInc/cesium.svg?branch=master)](https://travis-ci.org/AnalyticalGraphicsInc/cesium)&nbsp;
 [![Docs](https://img.shields.io/badge/docs-online-orange.svg)](http://cesiumjs.org/tutorials.html)
 	  
@@ -36,9 +38,13 @@ Compilador C++ 11 (**g++**), GNU debugger (**GDB**) e Doxygen.
 	Obs.: Para usuários Linux, tanto o g++ quanto o gdb são ambos nativo, faltando apenas instalar o Doxygen.  
 	Porém, caso deseje usar o gdb no Windows será necessário instalar o MinGW. 
 
-### :rocket: Download Doxygen  (***UBUNTU***): ###
+### :rocket: Download Doxygen ###
+
+Visite a página de [Download] ou instale diretamente no terminal usando o seguinte código caso seja usuário ***Ubuntu***:
 
 ```$ sudo apt-get install doxygen``` 	
+
+[Download]:http://www.stack.nl/~dimitri/doxygen/download.html
 
 ## Etapa de compilação e execução
 
