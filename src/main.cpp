@@ -3,7 +3,7 @@
  * @brief     Contém a função main e alguns testes com as classes Node e BinarySeachTree
  * @author    Samuel Lucas de Moura Ferino
  * @since     26.04.2018
- * @version   0.0.8
+ * @version   0.1.3
  */ 
  
  

@@ -58,8 +58,22 @@ class Node{
 		}
 		
 		/**
+		 * @brief   Construtor cópia
+		 * @param 	outroNoh	Nó que será usada como molde para construir esse nó
+		 */
+		Node(const Node<T> &outroNoh){
+
+			this->chave = outroNoh.getChave();
+			this->p = outroNoh.getP();
+			this->esquerda = outroNoh.getEsquerda();
+			this->direita = outroNoh.getDireita();
+		
+		}
+
+
+		/**
 		 * @brief	Sobrecarga do operador =
-		 *			Pode atuar como um dos construtores
+		 *			Obs.: Pode atuar como um dos construtores
 		 * @param 	outroNoh 		Nó usado como referência 	
 		 */
 		Node<T>& operator=( Node<T>& outroNoh){
