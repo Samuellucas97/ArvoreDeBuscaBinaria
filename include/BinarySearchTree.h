@@ -66,7 +66,7 @@ class BinarySearchTree{
 		 * @brief   Construtor parametrizado ao mesmo tempo
 		 * @param 	raizNova			Nó novo
 		 */	
-		BinarySearchTree(Node<T>* raizNova ): raiz(raizNova){}
+		explicit BinarySearchTree(Node<T>* raizNova ): raiz(raizNova){}
 
 		/**
 		 * @brief   Construtor cópia
@@ -108,7 +108,7 @@ class BinarySearchTree{
 		 * @brief 		Método get do atributo raiz
 		 * @return 		Nó raiz
 		*/
-		Node<T>* getRaiz(){ 
+		Node<T>* getRaiz() const{ 
 			return this->raiz; 
 		}
 
@@ -124,7 +124,7 @@ class BinarySearchTree{
 		 * @brief 		Método get do atributo raiz
 		 * @return 		Nó raiz
 		*/
-		int getQuantidadeDeElementos(){	
+		int getQuantidadeDeElementos() const{	
 			return this->quantidadeDeElementos; 
 		}
 
