@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/62b6241e54594fce96fda08bb64e8c7d)](https://www.codacy.com/app/Samuellucas97/BinarySearchTree?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Samuellucas97/BinarySearchTree&amp;utm_campaign=Badge_Grade)	 
 ![License MIT](https://img.shields.io/npm/l/express.svg)
-[![Build Status](https://travis-ci.org/AnalyticalGraphicsInc/cesium.svg?branch=master)](https://travis-ci.org/AnalyticalGraphicsInc/cesium)&nbsp;
+![TeamCity (simple build status)](https://img.shields.io/teamcity/http/teamcity.jetbrains.com/s/bt345.svg)
 [![Docs](https://img.shields.io/readthedocs/pip.svg)](http://cesiumjs.org/tutorials.html)
 	  
 
