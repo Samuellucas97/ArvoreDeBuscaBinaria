@@ -1,9 +1,9 @@
 /**
- * @file		binarysearchtree.h 
+ * @file		BinarySearchTree.h 
  * @brief     	Contém a classe BinarySearchTree a implementação de seus métodos
  * @author 		Samuel Lucas de Moura Ferino
  * @since 		26.04.2018
- * @version		0.1.2
+ * @version		0.1.3
 */
 
 #ifndef	_BINARYSEARCHTREE_H
@@ -198,7 +198,7 @@ class BinarySearchTree{
 			 */
 			Node<T>* copyRootPre = this->raiz; 			
 	 
-	    cout << "PRE-ORDEM: ";
+	    	cout << "PRE-ORDEM: ";
 	 
 			preOrderTreeWalk(copyRootPre);
 
@@ -359,8 +359,8 @@ class BinarySearchTree{
 	     * @param   key   Chave a ser buscada
 	     * @return  True se encontrado ou False senão
 	     */ 
-			bool seachIterativeBOOLEAN(T key){
-		  {
+		bool seachIterativeBOOLEAN(T key){
+		 
 		    /*! \var  Node<T>* result 
 		          \brief   Busca na árvore a menor chave
 		     */ 
@@ -373,38 +373,37 @@ class BinarySearchTree{
 		      return true;
 		    }
 		    
-		    }
-		  }
+		}
 		  
-		  /**
-		   * @brief   Busca o nó da árvore mais à esquerda
-		   * @return  O nó da árvore com a menor chave
-		   */ 
-		  Node<T>* minimum() const{
-		    
-		    /*!	\var	Node<T>* copyRoot 
-						\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
+	  	/**
+	   	 * @brief   Busca o nó da árvore mais à esquerda
+	   	 * @return  O nó da árvore com a menor chave
+	   	 */ 
+	  	Node<T>* minimum() const{
+	    
+	    	/*!	\var	Node<T>* copyRoot 
+					\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
 				 */
-				Node<T>* copyRoot = this->raiz;
-		    
+			Node<T>* copyRoot = this->raiz;
+	    
 		    while(copyRoot->getEsquerda() != nullptr){ /// ENQUANTO O FILHO ESQUERDO NÃO FOR NULO O PONTEIRO ATUAL RECEBE O ENDEREÇO DO FILHO ESQUERDO
 		      copyRoot = copyRoot->getEsquerda();  
 		    }
 		    
 		    return copyRoot;
+	    
+	 	}
+	  
+		/**
+		 * @brief   Busca o nó da árvore mais à direita
+		 * @return  O nó da árvore com a maior chave
+		 */ 
+		Node<T>* maximum() const{
 		    
-		  }
-		  
-		  /**
-		   * @brief   Busca o nó da árvore mais à direita
-		   * @return  O nó da árvore com a maior chave
-		   */ 
-		  Node<T>* maximum() const{
-		    
-		    /*!	\var	Node<T>* copyRoot 
-						\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
-				 */
-				Node<T>* copyRoot = this->raiz;
+		   	/*!	\var	Node<T>* copyRoot 
+				\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
+		     */
+			Node<T>* copyRoot = this->raiz;
 		    
 		    while(copyRoot->getDireita() != nullptr){   /// ENQUANTO O FILHO DIREITO NÃO FOR NULO O PONTEIRO ATUAL RECEBE O ENDEREÇO DO FILHO DIREITO
 		      copyRoot = copyRoot->getDireita();  
@@ -412,15 +411,15 @@ class BinarySearchTree{
 		    
 		    return copyRoot;
 		    
-		  }
-		  
-		  /**
-		   * @brief   Busca o nó que contém o sucessor do nó x
-		   * @param   x   Nó o qual será buscando o seu sucessor
-		   * @return  Nó sucessor
-		   */ 
-		  Node<T>* sucessor(Node<T>* x)
-		  {
+		}
+	  
+		/**
+		 * @brief   Busca o nó que contém o sucessor do nó x
+		 * @param   x   Nó o qual será buscando o seu sucessor
+		 * @return  Nó sucessor
+		 */ 
+		Node<T>* sucessor(Node<T>* x)
+		{
 		    
 		    if(x->getDireita() != nullptr){ /// O NÓ x TEM FILHO À DIREITA
 		      x = mimimunOfAnyNode( x->getDireita() );
@@ -437,38 +436,40 @@ class BinarySearchTree{
 		     }
 		     
 		     return copyFather;
-		  }
+		}
 		  
-		  /**
-		   * @brief   Busca o nó que contém o sucessor do nó x
-		   * @param   x   Nó o qual será buscando o seu sucessor
-		   * @return  Nó sucessor
-		   */ 
-		  Node<T>* predecessor(Node<T>* x){
+		/**
+		 * @brief   Busca o nó que contém o sucessor do nó x
+		 * @param   x   Nó o qual será buscando o seu sucessor
+		 * @return  Nó sucessor
+		 */ 
+		Node<T>* predecessor(Node<T>* x){
 		     
-		     if(x->getEsquerda() != nullptr){ /// O NÓ x TEM FILHO À ESQUERDA
+		    if(x->getEsquerda() != nullptr){ /// O NÓ x TEM FILHO À ESQUERDA
 		        x = maximumOfAnyNode( x->getEsquerda() );
 		        return x;
-		     }
+		    }
 		     
 		    /*!	\var	Node<T>* copyFather 
 						\brief	 Copia do nó pai do nó x	 
 				 */
 		    Node<T>* copyFather = x->getP(); 
 		     
-		     while(copyFather != nullptr && copyFather->getEsquerda() == x ){  /// SUBINDO PELA ÁRVORE
+		    while(copyFather != nullptr && copyFather->getEsquerda() == x ){  /// SUBINDO PELA ÁRVORE
 		       x = copyFather;
 		       copyFather = copyFather->getP();
-		     }
+		    }
 		     
-		     return copyFather;
+		    return copyFather;
 		     
-		  }
+		}
 		  
-		  /**
-		   * @brief   Identifica o local onde deve
-		   */ 
-		  void insert(T value){
+		/**
+		 * @brief   Cria um novo nó com o conteúdo entrado, identifica o local 
+		 *          onde ele deve ser colocado na árvore e adiciona-o
+		 * @param   value   Conteúdo do novo nó
+		 */ 
+		void insert(T value){
 		    
 		    /*!	\var	Node<T>* copyRoot 
 						\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
@@ -483,19 +484,19 @@ class BinarySearchTree{
 		    Node<T>* nodeSearch = nullptr;
 	  	    
 	  	    /// BUSCANDO SE O NÓ JÁ EXISTE
-	  	    while( copyRoot != nullptr)
-	  	    {
-	  	      nodeSearch = copyRoot;
+	  	    while( copyRoot != nullptr){
 	  	      
-	  	      if( value < copyRoot->getChave() ){ /// Value MENOR QUE CHAVE DO PONTEIRO ATUAL
-	  	        copyRoot = copyRoot->getEsquerda();
-	  	      }
-	  	      else if( value == copyRoot->getChave() ){ /// Value IGUAL A CHAVE DO PONTEIRO ATUAL
-	  	        break;
-	  	      }
-	  	      else{ /// Value MAIOR QUE CHAVE DO PONTEIRO ATUAL
-	  	        copyRoot = copyRoot->getDireita(); 
-	  	      }
+	  	    	nodeSearch = copyRoot;
+	  	      
+	  		    if( value < copyRoot->getChave() ){ /// Value MENOR QUE CHAVE DO PONTEIRO ATUAL
+	  	        	copyRoot = copyRoot->getEsquerda();
+	  	    	}
+	  	    	else if( value == copyRoot->getChave() ){ /// Value IGUAL A CHAVE DO PONTEIRO ATUAL
+	  	        	break;
+	  	      	}
+	  	      	else{ /// Value MAIOR QUE CHAVE DO PONTEIRO ATUAL
+	  	        	copyRoot = copyRoot->getDireita(); 
+	  	      	}
 	  	    }   
 	  	      
 	  	    /// CRIANDO NOVO NÓ 
@@ -510,14 +511,81 @@ class BinarySearchTree{
 	  	      nodeSearch->setDireita(newNode);    /// TORNANDO newNode O FILHO DIREITO DE nodeSearch
 	  	    }  
 	  	   
-	  	   ++(this->quantidadeDeElementos);   /// INCREMENTANDO NA QUANTIDADE TOTAL DE NÓS DA ÁRVORE
+	  	   	++(this->quantidadeDeElementos);   /// INCREMENTANDO NA QUANTIDADE TOTAL DE NÓS DA ÁRVORE
 		    
 		    }
-		    else{
+		    else{ /// PRIMEIRA INSERÇÃO NA ÁRVORE
 		   
-		      copyRoot->setChave(value);
-	  	   ++(this->quantidadeDeElementos);   /// INCREMENTANDO NA QUANTIDADE TOTAL DE NÓS DA ÁRVORE
+		      	copyRoot->setChave(value);
+	  	   		++(this->quantidadeDeElementos);   /// INCREMENTANDO NA QUANTIDADE TOTAL DE NÓS DA ÁRVORE
 		   
+		    }
+		}
+    
+      	/**
+		 * @brief   Identifica o local onde deve ser colocado o novo nó na árvore e adiciona-o
+		 * @param   novoNoh   Novo nó
+		 * @return  True caso tenha sido adiciona, false caso contrário
+		 */ 
+		bool insertNode(Node<T>* novoNoh){
+		    
+  		  if(novoNoh != nullptr){  
+  		    /*!	\var	Node<T>* copyRoot 
+  						\brief	 Copia do nó raiz que será usado no momento de percorrer em ordem a árvore	 
+  				 */
+  		    Node<T>* copyRoot = this->raiz;
+  		    
+  		    if( this->quantidadeDeElementos > 0){
+  	  	    
+  	  	    /*!	\var	Node<T>* nodeSearch 
+  						\brief	 Nó anterior ao local em que será adicionado o novo nó	 
+  				   */
+  		      Node<T>* nodeSearch = nullptr;
+  	  	    
+  	  	    /// BUSCANDO SE O NÓ JÁ EXISTE
+  	  	    while( copyRoot != nullptr){
+  	  	      
+  	  	      nodeSearch = copyRoot;
+  	  	      
+  	  	      if( novoNoh->getChave() < copyRoot->getChave() ){ /// Value MENOR QUE CHAVE DO PONTEIRO ATUAL
+  	  	        copyRoot = copyRoot->getEsquerda();
+  	  	      }
+  	  	      else if( novoNoh->getChave() == copyRoot->getChave() ){ /// Value IGUAL A CHAVE DO PONTEIRO ATUAL
+  	  	        break;
+  	  	      }
+  	  	      else{ /// Value MAIOR QUE CHAVE DO PONTEIRO ATUAL
+  	  	        copyRoot = copyRoot->getDireita(); 
+  	  	      }
+  	  	    }   
+  	  	      
+  	  	    novoNoh->setP(nodeSearch); 
+  	  	                	    
+  	  	    /// ADICIONANDO O NÓ
+  	        if( novoNoh->getChave() < nodeSearch->getChave() ){   /// TORNANDO newNode O FILHO ESQUERDO DE nodeSearch
+  	          nodeSearch->setEsquerda(novoNoh);  
+  	        }	 
+  	  	    else{
+  	  	      nodeSearch->setDireita(novoNoh);    /// TORNANDO newNode O FILHO DIREITO DE nodeSearch
+  	  	    }  
+  	  	   
+  	  	   ++(this->quantidadeDeElementos);   /// INCREMENTANDO NA QUANTIDADE TOTAL DE NÓS DA ÁRVORE
+  		      
+  		      return true;
+  		    
+  		    }
+  		    else{   /// PRIMEIRA INSERÇÃO NA ÁRVORE
+  		   
+  		      copyRoot->setChave( novoNoh->getChave() );
+  	  	   ++(this->quantidadeDeElementos);   /// INCREMENTANDO NA QUANTIDADE TOTAL DE NÓS DA ÁRVORE
+  		    
+  		      return true;
+  		      
+  		    }
+		    }
+		    else{ /// O NÓ novoNoh É NULO
+		      
+		      return false;
+		      
 		    }
 		  }
 
@@ -528,7 +596,7 @@ class BinarySearchTree{
 	   	 */
 		Node<T>* mimimunOfAnyNode(Node<T>* x){
 		  
-		  while(x->getEsquerda() != nullptr){
+		  while(x->getEsquerda() != nullptr){ /// ENQUANTO TIVER DESCENTE À ESQUERDA
 		    x = x->getEsquerda();
 		  }
 		  
@@ -543,17 +611,79 @@ class BinarySearchTree{
 		 */ 
 		Node<T>* maximumOfAnyNode(Node<T>* x){
 			  
-		  while(x->getDireita() != nullptr){
+		  while(x->getDireita() != nullptr){ /// ENQUANTO TIVER DESCENTE À DIREITA
 		    x = x->getDireita();
 		  }
 		  
 		  return x;
 			  
 		}
-		  
+		
+		/**
+		 * @brief   Remove da árvore o nó nodeAlvo
+		 * @param   nodeAlvo  Nó que será removido
+		 */ 
+		bool removeNode(Node<T>* nodeAlvo){	
+  		  
+	  		if(nodeAlvo !=  nullptr){ 
+	  		
+	  		  if( nodeAlvo->getEsquerda() == nullptr){  /// O NÓ nodeAlvo A SER REMOVIDO **NÃO TEM** FILHO À ESQUERDA
+	  		    transplant(nodeAlvo, nodeAlvo->getDireita() );
+	  		  }
+	  		  else if( nodeAlvo->getDireita() == nullptr){  /// O NÓ nodeAlvo A SER REMOVIDO **NÃO TEM** FILHO À DIREITA
+	  		    transplant(nodeAlvo, nodeAlvo->getEsquerda() );
+	  		  }
+	  		  else{  /// O NÓ nodeAlvo A SER REMOVIDO **TEM** FILHO À ESQUERDA E À DIREITA
+	  		    
+	  		    Node<T>* menorMaiorNoh = mimimunOfAnyNode(nodeAlvo->getDireita() ); /// PEGO O MENOR DOS FILHOS À DIREITA DE nodeAlvo PARA GARANTIR QUE SEJA MAIOR QUE TODOS OS DESCENTES À ESQUERDA DE nodeAlvo
+	  		    
+	  		    if(menorMaiorNoh->getP() != nodeAlvo){
+	  		      transplant(menorMaiorNoh, menorMaiorNoh->getDireita() );
+	  		      menorMaiorNoh->setDireita( nodeAlvo->getDireita() );
+	  		      menorMaiorNoh->getP()->setDireita( menorMaiorNoh );
+	  		    }
+	  		    
+	  		    transplant( nodeAlvo, menorMaiorNoh );
+	  		    menorMaiorNoh->setEsquerda( nodeAlvo->getEsquerda() );
+	  		    menorMaiorNoh->getP()->setEsquerda( menorMaiorNoh ) ;
+	  		  }
+	  		  
+	  		  return true;
+	  		
+	  		}
+	  		
+	  		else{
+	  		
+	  		  return false;
+	  		}
+  		
+		} 
+		
 	 ///    /\/\/\/\/\/\      MÉTODOS PRIVADOS    /\/\/\/\/\/\      
 	  
 	private:
+  
+	    /**
+	     * @brief   Substitui uma subárvore como um filho de seu pai por outra subárvore
+	     * @param   u 	Nó que será substituído pelo nó v
+	     * @param   v 	Nó que substituirá o nó u
+	     */
+    	void transplant(Node<T>* u, Node<T>* v){
+       
+	        if( u->getP() == nullptr ){ /// CASO EM QUE SERÁ REMOVIDA A RAIZ, POR ISSO, v SERÁ A NOVA RAIZ 
+	          this->raiz = v;
+	        }
+	        else if( u == u->getP()->getEsquerda() ){ /// u É O FILHO À ESQUERDA
+	          u->getP()->setEsquerda(v);
+	        }
+	        else{ /// u É O FILHO À DIREITA
+	          u->getP()->setDireita(v);
+	        }
+	        if(v != nullptr){ /// JÁ QUE FOI MOVIDO UM FILHO NÃO NULO, FALTA DIZER QUEM É O PAI DELE 
+	          v->setP(u->getP());
+	        }
+        
+      	} 
   
 	    /**
 	     * @brief   Destrói os nós da árvore
