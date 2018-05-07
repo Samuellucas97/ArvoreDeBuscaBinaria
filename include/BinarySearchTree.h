@@ -66,7 +66,7 @@ class BinarySearchTree{
 		 * @brief   Construtor parametrizado ao mesmo tempo
 		 * @param 	raizNova			Nó novo
 		 */	
-		explicit BinarySearchTree(Node<T>* raizNova ): raiz(raizNova){}
+		explicit BinarySearchTree(Node<T>* raizNova ): raiz(raizNova), quantidadeDeElementos(0){}
 
 		/**
 		 * @brief   Construtor cópia
