@@ -280,7 +280,7 @@ class BinarySearchTree{
 	     * @param   key   Chave a ser buscada
 	     * @return  Um ponteiro nulo ou o ponteiro para o nó buscado
 	     */ 
-	    Node<T>* searchRecursively(Node<T>* x, T key){
+	    Node<T>* searchRecursively(Node<T>*& x, T key){
 				  
 			if( x == nullptr || x->getChave() == key){ /// CONDIÇÃO DE PARADA: Chave encontrada ou ponteiro nulo (fim desse caminho )
 			 
