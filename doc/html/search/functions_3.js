@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['maximumofanynode',['maximumOfAnyNode',['../classBinarySearchTree.html#a24b73aadc7fbb2e354e96482007d741f',1,'BinarySearchTree']]],
-  ['mimimunofanynode',['mimimunOfAnyNode',['../classBinarySearchTree.html#a0074d23c2696337440628948fede31c0',1,'BinarySearchTree']]]
-];
