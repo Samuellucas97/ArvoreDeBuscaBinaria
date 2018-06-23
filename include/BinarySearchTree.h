@@ -422,7 +422,7 @@ class BinarySearchTree{
 		{
 		    
 		    if(x->getDireita() != nullptr){ /// O NÓ x TEM FILHO À DIREITA
-		      x = mimimunOfAnyNode( x->getDireita() );
+		      return mimimunOfAnyNode( x->getDireita() );
 		    }
 		    
 		    /*!	\var	Node<T>* copyFather 
@@ -446,8 +446,7 @@ class BinarySearchTree{
 		Node<T>* predecessor(Node<T>* x){
 		     
 		    if(x->getEsquerda() != nullptr){ /// O NÓ x TEM FILHO À ESQUERDA
-		        x = maximumOfAnyNode( x->getEsquerda() );
-		        return x;
+		        return maximumOfAnyNode( x->getEsquerda() );
 		    }
 		     
 		    /*!	\var	Node<T>* copyFather 
